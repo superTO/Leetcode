@@ -9,8 +9,7 @@
  */
 
 /** n is 32 bits unsigned integer */
-function reverseBits(n: number): number {
-    // console.log(n.toString(2).padStart(32, '0'));
+function reverseBits(n: number = 0b00): number {
     /** Solution 1 */
     return parseInt(n.toString(2).padStart(32, '0').split('').reverse().join(''), 2);
 
@@ -51,6 +50,19 @@ function reverseBits(n: number): number {
 
 
 /** test case */
+/** Parameter adds prefix "0b" represent this number is binary. (ES6) */
 
-// console.log(reverseBits(00000010100101000001111010011100)); // 964176192
-console.log(reverseBits(11111111111111111111111111111101)); // 3221225471
+console.log(reverseBits(0b00000010100101000001111010011100)); // 964176192
+console.log(reverseBits(0b11111111111111111111111111111101)); // 3221225471
+
+
+/**
+ * Newer versions of JavaScript -- specifically ECMAScript 6 -- have added support for 
+ * binary (prefix 0b), octal (prefix 0o) and hexadecimal (prefix: 0x) numeric literals:
+ * 
+ * var bin = 0b1111;    // bin will be set to 15
+ * var oct = 0o17;      // oct will be set to 15
+ * var oxx = 017;       // oxx will be set to 15
+ * var hex = 0xF;       // hex will be set to 15
+ * // note: bB oO xX are all valid
+ */
