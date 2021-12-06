@@ -7,16 +7,15 @@ function merge(intervals: number[][]): number[][] {
     const result = [];
     let [s,e] = intervals[0];
     
-    result.push(intervals[0]);
-
     for(let val of intervals){
         if(val[0] <= e){
             e = Math.max(e, val[1]);
         } else {
-            [s,e] = val;
             result.push([s,e]);
+            [s,e] = val;
         }
     }
+    result.push([s,e])
     return result;
 };
 
