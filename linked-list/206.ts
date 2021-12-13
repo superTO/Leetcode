@@ -1,30 +1,8 @@
+import { GenerateNode, ListNode } from "./utils";
 /** 206. Reverse Linked List */
 /**
  * Definition for singly-linked list.
  */
-class ListNode {
-    val: number
-    next: ListNode | null
-    constructor(val?: number, next?: ListNode | null) {
-        this.val = (val===undefined ? 0 : val)
-        this.next = (next===undefined ? null : next)
-    }
-}
-
-function GenerateNode(data: number[]): ListNode | null{
-    let result: ListNode[] = [];
-
-    for(let item of data){
-        result.push(new ListNode(item));
-    }
-
-    let i = 0;
-    while(i < result.length){
-        result[i].next = result[++i];
-    }
-
-    return result[0];
-}
 
 /** new ListNode() 在 leetcode 上會 Run error */
 // function reverseList(head: ListNode | null): ListNode | null {
