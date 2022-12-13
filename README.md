@@ -16,6 +16,6 @@ lodash.js library is included by default
 
 ## how to run
 ```
-tsc 1.TwoSum.ts -t 'es2020'
+npx tsc -t 'es2020' -m "nodenext" 1.TwoSum.ts
 node 1.TwoSum.js
 ```
