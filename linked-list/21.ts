@@ -1,7 +1,7 @@
-import { GenerateNode, ListNode } from "./utils";
+import { GenerateNode, ListNode } from "./utils.js";
 
 /** 21. Merge Two Sorted Lists */
-function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+export function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
     if(!list1) return list2;
     if(!list2) return list1;
 
