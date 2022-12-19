@@ -1,4 +1,4 @@
-import { GenerateNode, ListNode, NodeDeepLength } from "./utils.js";
+import { GenerateNode, ListNode } from "./utils.js";
 
 /** 143. Reorder List */
 function reorderList(head: ListNode | null): void {
